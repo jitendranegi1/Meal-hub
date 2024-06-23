@@ -2,37 +2,131 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* src/Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  color: #333;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  border-right: 1px black solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar.open {
+  transform: translateX(0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.close-btn {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  /* padding: 0; */
+  text-align: left;
+  padding-left: 3pc;
+}
+
+li {
+  padding: 15px;
+}
+
+.toggle-btn {
+  margin-left: -74pc;
+  margin-top: 4px;
+}
+
+.sidebar-hamburger-icon {
+  margin-left: 13pc;
+  margin-top: 4px;
+}
+
+/* Filename: App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.home,
+.services,
+.reports,
+.contact,
+.events,
+.support {
+  /* display: flex; */
+  margin-left: 260px;
+  font-size: 1rem;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.text-center {
+  text-align: center;
+}
+.fontSize-2 {
+  font-size: 2em;
+}
+.home {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.sidebar-heading {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.box {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+  flex: 1 1 30%;
+  text-align: center;
+  min-height: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.link{
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 768px) {
+  .box {
+      flex: 1 1 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.text-center {
+  text-align: center;
+}
+
+.heart-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.aboutme h3 {
+  margin-left: 260px;
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 1pc;
 }
